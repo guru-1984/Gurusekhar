@@ -1,0 +1,14 @@
+PS C:\gur\appservice>  terraform import azurerm_resource_group.rg12 "/subscriptions/f08d4085-9090-4592-b033-9328d9d8e9e0/resourceGroups/project2-rg"
+azurerm_resource_group.rg12: Importing from ID "/subscriptions/f08d4085-9090-4592-b033-9328d9d8e9e0/resourceGroups/project2-rg"...
+azurerm_resource_group.rg12: Import prepared!
+  Prepared azurerm_resource_group for import
+azurerm_resource_group.rg12: Refreshing state... [id=/subscriptions/f08d4085-9090-4592-b033-9328d9d8e9e0/resourceGroups/project2-rg]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+
+Have done same import for all the 
