@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myapp1
+  name: myapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myapp1
+    spec:
+      containers:
+      - image: devopsproject2.azurecr.io/project1:latest
+        name: devopsproject2
+        ports:
+        -  containerPort: 5000
+           name: http
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myapp1
+  name: myapp1
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: myapp1
+  type: LoadBalancer
